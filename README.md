@@ -12,7 +12,8 @@ In this kata, you will refactor a simple Ecommerce Card component and the goal i
 
 Take into account the following requirements:
 - All components must be wrapped with `withRenderCount` HOC. It is important to evaluate in the test if the solution is correct.
-- Refactor only files in `components/EcommerceCard` and do not edit files in `src/locked` folder.
+- Refactor only files in `components/EcommerceCard` and do not edit files in `src/locked` folder Most of the components does not need big changes, just composition.
+- Be free to change the logic or states if needed. But price must change when changing the size.
 - Run test in order to check if your refactor is correct.
 
 ## Goals
