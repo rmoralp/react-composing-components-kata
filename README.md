@@ -3,7 +3,7 @@
 This kata is about composing components. A good composition of components has several benefits:
 
 - **Reusability**: By breaking down our UI into smaller components, we can reuse these components across our application. This leads to less code duplication and makes our code **easier to maintain and test.**
-- **Performance**: Each time a component's state or props change, the component re-renders. If a parent component re-renders, all the child components also re-render. This can lead to unnecessary re-renders and negatively impact performance.
+- **Performance**: Each time a component's state or props value change, the component re-renders. If a parent component re-renders, all the child components also re-render. This can lead to unnecessary re-renders and negatively impact performance.
 - **Scalability**: Components can be composed to create more complex components. This makes it easier to scale our application as it grows.
 
 ## The task
@@ -15,6 +15,7 @@ Take into account the following requirements:
 - Refactor only files in `components/EcommerceCard` and do not edit files in `src/locked` folder Most of the components does not need big changes, just composition.
 - Be free to change the logic or states if needed. But price must change when changing the size.
 - Run test in order to check if your refactor is correct.
+- There will be a button on the top right corner to force a re-render of all components. Use it when needed to test how it behaves. Given it increments renders count, it is called "Increment".
 
 ## Goals
 
@@ -26,7 +27,6 @@ The test will ensure that:
 
 Make the test pass by refactoring the EcommerceCard component.
 
-
 ## Interesting resources
 
 - https://www.patterns.dev/react/compound-pattern/
@@ -34,3 +34,9 @@ Make the test pass by refactoring the EcommerceCard component.
 - https://legacy.reactjs.org/docs/composition-vs-inheritance.html
 - https://dev.to/ricardolmsilva/composition-pattern-in-react-28mj
 - https://www.dhiwise.com/post/composing-components-in-react-building-blocks-for-apps#performance-considerations-in-composition
+
+## Usage
+
+To install dependencies `npm install`
+To run the tests `npm run test`
+To run the development server `npm run dev`
