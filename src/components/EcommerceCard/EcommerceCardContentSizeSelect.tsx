@@ -1,4 +1,6 @@
 import { withRenderCount } from '@/locked/useRenderCount'
+import { useContext } from 'react'
+import { SizeContext } from '@/components/EcommerceCard/index.tsx'
 
 const options = [
   { value: '7', label: '7' },
@@ -6,15 +8,11 @@ const options = [
   { value: '9', label: '9' },
   { value: '10', label: '10' },
 ]
-function EcommerceCardContentSizeSelectBase({
-  size,
-  onValueChange,
-}: {
-  size?: string
-  onValueChange: (value: string) => void
-}) {
+function EcommerceCardContentSizeSelectBase() {
+  const { size, setSize } = useContext(SizeContext)
+
   const onChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    onValueChange(e.target.value)
+    setSize(e.target.value)
   }
 
   return (
