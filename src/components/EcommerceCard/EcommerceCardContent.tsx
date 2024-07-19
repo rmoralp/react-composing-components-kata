@@ -1,34 +1,22 @@
-import { EcommerceCardContentButton } from './EcommerceCardContentButton'
 import { withRenderCount } from '@/locked/useRenderCount'
 import { EcommerceCardContentSizeSelect } from './EcommerceCardContentSizeSelect'
 import { EcommerceCardContentPrice } from './EcommerceCardContentPrice'
-import { EcommerceCardContentInfo } from './EcommerceCardContentInfo'
-import { useProductPrice } from '@/locked/useProductPrice'
-import { useState } from 'react'
+import { Button } from '@/locked/ui/button.tsx'
 
 function EcommerceCardContentBase() {
-  const [size, setSize] = useState('7')
-  const { data: price } = useProductPrice({
-    productId: 'product-id',
-    size,
-  })
-
-  const onSizeChange = (value: string) => {
-    setSize(value)
-  }
   return (
     <div className="p-4 bg-background">
-      <EcommerceCardContentInfo />
+      <h3 className="text-xl font-bold">Classic Leather Sneakers</h3>
+      <p className="text-sm text-muted-foreground">
+        Timeless style and unbeatable comfort.
+      </p>
       <div className="mt-4 flex items-center justify-between">
         <div>
-          <EcommerceCardContentSizeSelect
-            size={size}
-            onValueChange={onSizeChange}
-          />
+          <EcommerceCardContentSizeSelect />
         </div>
-        <EcommerceCardContentPrice price={price} />
+        <EcommerceCardContentPrice />
       </div>
-      <EcommerceCardContentButton />
+      <Button className="mt-4 w-full">Add to Cart</Button>
     </div>
   )
 }

@@ -16,6 +16,8 @@ describe('Evaluate App components composition', () => {
     }, 0)
 
     expect(sum).toBeLessThanOrEqual(8)
+
+    console.log(sum)
   })
 
   it('<App /> should have less or equal than 23 renders after force renders count', async () => {
@@ -36,6 +38,8 @@ describe('Evaluate App components composition', () => {
     }, 0)
 
     expect(sum).toBeLessThanOrEqual(23)
+
+    console.log(sum)
   })
 
   it('<App /> should have less or equal than 8 renders after selecting a different size', async () => {
@@ -54,5 +58,7 @@ describe('Evaluate App components composition', () => {
     }, 0)
 
     expect(sum).toBeLessThanOrEqual(8)
+
+    console.log(sum)
   })
 })

@@ -1,12 +1,12 @@
 import { withRenderCount } from '@/locked/useRenderCount'
-import { EcommerceCardContentInfoDescription } from './EcommerceCardContentInfoDescription'
-import { EcommerceCardContentInfoTitle } from './EcommerceCardContentInfoTitle'
 
 function EcommerceCardContentInfoBase() {
   return (
     <>
-      <EcommerceCardContentInfoTitle />
-      <EcommerceCardContentInfoDescription />
+      <h3 className="text-xl font-bold">Classic Leather Sneakers</h3>
+      <p className="text-sm text-muted-foreground">
+        Timeless style and unbeatable comfort.
+      </p>
     </>
   )
 }
