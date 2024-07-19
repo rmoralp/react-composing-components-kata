@@ -14,7 +14,7 @@ describe('Evaluate App components composition', () => {
     const sum = counters.reduce((acc, counter) => {
       return acc + parseInt(counter.textContent!)
     }, 0)
-
+    console.log('1',sum)
     expect(sum).toBeLessThanOrEqual(8)
   })
 
@@ -34,7 +34,7 @@ describe('Evaluate App components composition', () => {
     const sum = counters.reduce((acc, counter) => {
       return acc + parseInt(counter.textContent!)
     }, 0)
-
+    console.log('2',sum)
     expect(sum).toBeLessThanOrEqual(23)
   })
 
